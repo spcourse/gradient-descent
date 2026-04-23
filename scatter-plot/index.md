@@ -13,7 +13,7 @@ And the model we found earlier: $$w = 8000$$, $$b = 50000$$.
 
 ## Assignment
 
-Create a file called `scatter_plot.py`. Plot the six apartments as a scatter plot, then draw the regression line on top.
+Create a file called `plot_regression.py`. Plot the six apartments as a scatter plot, then draw the regression line on top.
 
 For the line, generate a list of x-values covering the range of the data and use your `apply_affine` function to compute the corresponding predicted prices.
 
