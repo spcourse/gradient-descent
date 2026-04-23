@@ -4,7 +4,7 @@ In the apply affine assignment, we showed this plot:
 
 ![Scatter plot with a fitted line](../apply-affine/prices_fit.png){: style="max-width:60%;"}
 
-Your job is to recreate it. Use the following data:
+Your job is to create a similar plot, but using the data from the MSE assignment:
 
     sizes  = [30.0, 45.0, 60.0, 75.0, 90.0, 120.0]
     actual = [280000.0, 400000.0, 540000.0, 660000.0, 760000.0, 1020000.0]
@@ -27,7 +27,7 @@ Make sure to:
 ## Hints
 
 * Use `plt.scatter(x, y)` for the data points and `plt.plot(x, y)` for the line.
-* Checkpy cannot judge whether your graph looks correct (but you can just compare your result with the plot above.).
+* Checkpy cannot judge whether your graph looks correct (but *you* can 😊).
 
 ## Run
 
