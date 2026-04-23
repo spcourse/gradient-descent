@@ -62,9 +62,9 @@ $$
 
 ## Assignment — Part 2
 
-Define a second function `apply_affine_vec(xs, w, b)` that takes a list of input values and returns a new list of predictions. You could implement this in two ways:
+Define a second function `apply_affine(xs, w, b)` that takes a list of input values and returns a new list of predictions. You could implement this in two ways:
 
-- with a `for` loop in combination with the earlier defined `apply_affine`
+- with a `for` loop in combination with the earlier defined `predict`
 - using the vector functions you defined in earlier assignments
 
 choose your own adventure :)
