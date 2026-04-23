@@ -1,4 +1,4 @@
-# Apply Affine
+# Linear Regression, part 1
 
 Suppose we have data on Amsterdam apartments: the size of each apartment (in m²) and its sale price (in euros). When we plot this data, we see something like this:
 
@@ -47,20 +47,23 @@ In practice we want to predict prices for many apartments at the same time. We c
 We can express this in vector notation, which is exactly the same as before, but $$\mathbf{x}$$ is a vector now.:
 
 $$
-f(x) = w \cdot \mathbf{x} + b
+f(x) = w \cdot \mathbf{x} + b \cdot \mathbf{1}
 $$
 
-When expressed using summation, this becomes:
+The result is a new vector of predicted prices $$\hat{\mathbf{y}}$$, looking like this:
 
 $$
-\text{apply\_affine}(\mathbf{x}, w, b)_i = w \cdot x_i + b
-$$
-
-The result is a new vector of predicted prices $$\hat{\mathbf{y}}$$.
+f(x) = \hat{\mathbf{y}} =
+\begin{pmatrix}
+w\cdot x_1+b\
+w\cdot x_2+b\
+\vdots\
+w\cdot x_n+b
+\end{pmatrix}$$
 
 ## Assignment — Part 2
 
-Define a second function `apply_affine_vec(xs, w, b)` that takes a list of input values and returns a new list of predictions. 
+Define a second function `apply_affine_vec(xs, w, b)` that takes a list of input values and returns a new list of predictions. You can define `for` loops to achieve this. But you can also ommit those by relying on the vector functions you defined before.
 
 ### Example Usage
 
