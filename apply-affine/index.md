@@ -8,7 +8,6 @@ There is a clear trend: larger apartments cost more. A natural way to model this
 
 ![Scatter plot with a fitted line](prices_fit.png){: style="max-width:50%;"}
 
-
 Finding the line that best fits the data is called **linear regression**. How we actually find it is the topic of the coming weeks. For now, let's assume we already have it.
 
 ## Step 1: predict a single value
@@ -43,7 +42,15 @@ Create a file called `apply_affine.py` and define a function `predict(x, w, b)` 
 
 ## Step 2: predict many values at once
 
-In practice we want to predict prices for many apartments at the same time. We can collect all the sizes in a vector and apply the affine function to every element:
+In practice we want to predict prices for many apartments at the same time. We can collect all the sizes in a vector and apply the affine function to every element in one function.
+
+We can express this in vector notation, which is exactly the same as before, but $$\mathbf{x}$$ is a vector now.:
+
+$$
+f(x) = w \cdot \mathbf{x} + b
+$$
+
+When expressed using summation, this becomes:
 
 $$
 \text{apply\_affine}(\mathbf{x}, w, b)_i = w \cdot x_i + b
@@ -53,7 +60,7 @@ The result is a new vector of predicted prices $$\hat{\mathbf{y}}$$.
 
 ## Assignment — Part 2
 
-Define a second function `apply_affine(xs, w, b)` that takes a list of input values and returns a new list of predictions. Use your `predict` function to compute each individual prediction.
+Define a second function `apply_affine_vec(xs, w, b)` that takes a list of input values and returns a new list of predictions. 
 
 ### Example Usage
 
@@ -64,7 +71,9 @@ Define a second function `apply_affine(xs, w, b)` that takes a list of input val
 
     [290000.0, 410000.0, 530000.0, 650000.0, 770000.0, 1010000.0]
 
-A 30 m² studio is predicted to cost €290,000. A 120 m² apartment comes out at just over a million. Whether these numbers are any good depends entirely on how well $$w$$ and $$b$$ were chosen — which is exactly what linear regression will solve.
+A 30 m² studio is predicted to cost €290,000. A 120 m² apartment comes out at just over a million. Whether these numbers are any good depends entirely on how well $$w$$ and $$b$$ were chosen.
+
+Choosing the best values for $$w$$ and $$b$$ is exactly what we will learn to do later. 
 
 ## Run
 
