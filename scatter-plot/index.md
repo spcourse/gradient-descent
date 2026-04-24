@@ -22,7 +22,7 @@ Make sure to:
 * Label the axes (`Size (m²)` and `Price (× €1000)`)
 * Add a legend with `data` and `f(x) = 8000x + 50000`
 * Show prices divided by 1000 on the y-axis, so the numbers stay readable
-* You should use the `apply_affine()` function from before to get the correct values for the regression line.
+
 
 ## Hints
 
@@ -31,8 +31,8 @@ Make sure to:
 
 ## Run
 
-    python scatter_plot.py
+    python plot_regression.py
 
 ## Checkpy
 
-    checkpy scatter_plot
+    checkpy plot_regression
