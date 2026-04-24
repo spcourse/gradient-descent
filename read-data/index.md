@@ -9,6 +9,8 @@ We have a CSV file `yearly_avg_temp.csv` containing yearly average minimum and m
 
 Each row contains a year, the average minimum temperature for that year (`avg_TN`), and the average maximum temperature (`avg_TX`), all separated by commas. Temperatures are in degrees Celsius.
 
+Download the data file here: [yearly_avg_temp.csv](yearly_avg_temp.csv)
+
 ## Assignment
 
 Create a file called `read_data.py` that reads `yearly_avg_temp.csv` and stores the data in three lists:
