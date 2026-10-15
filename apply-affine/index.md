@@ -45,18 +45,18 @@ Create a file called `apply_affine.py` and define a function `predict(x, w, b)` 
 In practice we want to predict prices for many apartments at the same time. We can collect all the sizes in a vector and apply the affine function to every element. In vector notation:
 
 $$
-f(\mathbf{x}) = w \cdot \mathbf{x} + b \cdot \mathbf{1}
+f(\vec{x}) = w\vec{x} + b\vec{1}
 $$
 
-which produces a new vector of predicted prices $$\hat{\mathbf{y}}$$:
+where $$\vec{1}$$ is a vector of ones. This produces a new vector of predicted prices $$\hat{\vec{y}}$$:
 
 $$
-\hat{\mathbf{y}} =
+\hat{\vec{y}} =
 \begin{pmatrix}
+w \cdot x_0 + b \\
 w \cdot x_1 + b \\
-w \cdot x_2 + b \\
 \vdots \\
-w \cdot x_n + b
+w \cdot x_{n-1} + b
 \end{pmatrix}
 $$
 

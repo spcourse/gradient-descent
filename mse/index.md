@@ -16,7 +16,7 @@ Our predictions are close, but not perfect. To know *how well* our model is doin
 A commonly used loss function in machine learning is the **Mean Squared Error** (MSE). It computes the average of the squared differences between each prediction and the actual value:
 
 $$
-\text{MSE} = \frac{1}{n} \Sigma_{i=0}^{n-1} (\hat{y}_i - y_i)^2
+\text{MSE} = \frac{1}{n} \sum_{i=0}^{n-1} (\hat{y}_i - y_i)^2
 $$
 
 Squaring the differences has two effects: it makes all errors positive, and it penalises large errors more heavily than small ones.
@@ -24,7 +24,7 @@ Squaring the differences has two effects: it makes all errors positive, and it p
 In vector notation, using the inner product:
 
 $$
-\text{MSE} = \frac{1}{n} \langle \hat{\mathbf{y}} - \mathbf{y},\ \hat{\mathbf{y}} - \mathbf{y} \rangle
+\text{MSE} = \frac{1}{n} (\hat{\vec{y}} - \vec{y}) \cdot (\hat{\vec{y}} - \vec{y})
 $$
 
 This is a hint: you can implement MSE using `vector_diff` and `inner_product` from an earlier assignment.

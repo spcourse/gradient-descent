@@ -18,27 +18,27 @@ Because the years are large numbers (1901–2025), we first **centre** them arou
 
 $$x_c = x - \bar{x}$$
 
-We fit on the centred years $$\mathbf{x}_c$$. The slope $$w$$ stays the same; $$b$$ becomes the predicted temperature at the mean year.
+We fit on the centred years $$\vec{x}_c$$. The slope $$w$$ stays the same; $$b$$ becomes the predicted temperature at the mean year.
 
 ## The loss
 
-Given predictions $$\hat{\mathbf{y}} = \text{apply\_affine}(\mathbf{x}_c, w, b)$$ and targets $$\mathbf{y}$$, the residuals are:
+Given predictions $$\hat{\vec{y}} = \text{apply\_affine}(\vec{x}_c, w, b)$$ and targets $$\vec{y}$$, the residuals are:
 
-$$r_i = \hat{y}_i - y_i \qquad \mathbf{r} = \hat{\mathbf{y}} - \mathbf{y}$$
+$$r_i = \hat{y}_i - y_i \qquad \vec{r} = \hat{\vec{y}} - \vec{y}$$
 
 The **mean squared error** measures how well the line fits:
 
-$$L(w, b) = \frac{1}{n} \Sigma_{i=0}^{n-1} r_i^2 = \frac{1}{n} \langle \mathbf{r},\ \mathbf{r} \rangle$$
+$$L(w, b) = \frac{1}{n} \sum_{i=0}^{n-1} r_i^2 = \frac{1}{n}\ \vec{r} \cdot \vec{r}$$
 
 ## The gradients
 
 To minimise $$L$$, we need its partial derivatives with respect to $$w$$ and $$b$$. Both are **scalars**:
 
-$$\frac{\partial L}{\partial w} = \frac{2}{n} \Sigma_{i=0}^{n-1} r_i \cdot x_{c,i} = \frac{2}{n}\ \langle \mathbf{r},\ \mathbf{x}_c \rangle$$
+$$\frac{\partial L}{\partial w} = \frac{2}{n} \sum_{i=0}^{n-1} r_i x_{c,i} = \frac{2}{n}\ \vec{r} \cdot \vec{x}_c$$
 
-$$\frac{\partial L}{\partial b} = \frac{2}{n} \Sigma_{i=0}^{n-1} r_i = \frac{2}{n}\ \langle \mathbf{r},\ \mathbf{1} \rangle$$
+$$\frac{\partial L}{\partial b} = \frac{2}{n} \sum_{i=0}^{n-1} r_i = \frac{2}{n}\ \vec{r} \cdot \vec{1}$$
 
-where $$\mathbf{1}$$ is a vector of ones of length $$n$$.
+where $$\vec{1}$$ is a vector of ones with $$n$$ elements.
 
 ## The update step
 

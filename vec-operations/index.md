@@ -4,10 +4,10 @@ For this assignment we consider three more simple but essential operations on ve
 
 ## Scalar multiply
 
-Multiplying a vector by a scalar $$c$$ scales every element:
+Multiplying a vector by a scalar $$c$$ (a plain number) scales every element. We write it as $$c\vec{v}$$, without a dot, because the dot is reserved for the inner product:
 
 $$
-(c \cdot \mathbf{v})_i = c \cdot v_i
+(c\vec{v})_i = c \cdot v_i
 $$
 
 ## Vector add
@@ -15,7 +15,7 @@ $$
 Adding two vectors adds their corresponding elements:
 
 $$
-(\mathbf{a} + \mathbf{b})_i = a_i + b_i
+(\vec{a} + \vec{b})_i = a_i + b_i
 $$
 
 ## Vector diff
@@ -23,7 +23,7 @@ $$
 Subtracting two vectors subtracts their corresponding elements:
 
 $$
-(\mathbf{a} - \mathbf{b})_i = a_i - b_i
+(\vec{a} - \vec{b})_i = a_i - b_i
 $$
 
 ## Assignment

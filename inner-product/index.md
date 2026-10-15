@@ -1,9 +1,9 @@
 # Inner Product
 
-In mathematics, a **vector** can be interpreted as an ordered sequence of numbers, for example:
+In mathematics, a **vector** can be interpreted as an ordered sequence of numbers, its elements (*kentallen*). We put an arrow above the name and write the elements in a column, for example:
 
 $$
-\mathbf{a} = (1, 2, 3) \qquad \mathbf{b} = (4, 5, 6)
+\vec{a} = \begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \qquad \vec{b} = \begin{pmatrix} 4 \\ 5 \\ 6 \end{pmatrix}
 $$
 
 In Python we can represent these vectors as lists:
@@ -11,17 +11,18 @@ In Python we can represent these vectors as lists:
     a = [1, 2, 3]
     b = [4, 5, 6]
 
+We number the elements of a vector with $$n$$ elements from $$0$$ to $$n-1$$, so $$\vec{a}$$ has elements $$a_0 = 1$$, $$a_1 = 2$$ and $$a_2 = 3$$. Your maths course counted from $$1$$, but we programmers prefer to start at $$0$$: that way $$a_i$$ is exactly `a[i]` in Python.
 
-The **inner product** (also called the *dot product*) of two vectors $$\mathbf{a}$$ and $$\mathbf{b}$$ of length $$n$$ is defined as:
+The **inner product** (also called the *dot product*; in Dutch *inproduct*) of two vectors $$\vec{a}$$ and $$\vec{b}$$ with $$n$$ elements is defined as:
 
 $$
-\langle \mathbf{a}, \mathbf{b} \rangle = \Sigma_{i=0}^{n-1} a_i \cdot b_i
+\vec{a} \cdot \vec{b} = \sum_{i=0}^{n-1} a_i b_i
 $$
 
 In words: multiply each pair of corresponding elements, then sum all those products. For example:
 
 $$
-\langle (1, 2, 3),\ (4, 5, 6) \rangle = 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6 = 4 + 10 + 18 = 32
+\begin{pmatrix} 1 \\ 2 \\ 3 \end{pmatrix} \cdot \begin{pmatrix} 4 \\ 5 \\ 6 \end{pmatrix} = 1 \cdot 4 + 2 \cdot 5 + 3 \cdot 6 = 4 + 10 + 18 = 32
 $$
 
 ## Assignment
@@ -40,7 +41,7 @@ Create a file called `inner_product.py` and define a function `inner_product(a, 
     13.0
     0.0
 
-> The second example computes the inner product of a vector with itself, the result is the sum of squared elements. The third example shows two perpendicular vectors: their inner product is always zero.
+> The second example computes the inner product of a vector with itself, the result is the sum of squared elements. The third example shows two perpendicular (*loodrechte*) vectors: their inner product is always zero.
 
 ## Run
 
