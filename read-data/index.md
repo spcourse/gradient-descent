@@ -31,14 +31,18 @@ Then find and print the coldest and warmest year for both temperature columns. U
 ## Hints
 
 - To read a file in Python, use a `with` block:
-- 
-        with open("yearly_avg_temp.csv") as f:
-            ...
+
+      with open("yearly_avg_temp.csv") as f:
+          ...
 
 - The first line of the file is a header, you need to skip this line. 
 - Split each line on `","` to get the individual values:
 
-        parts = line.split(",")
+      parts = line.split(",")
+
+- To always print two decimals, add `:.2f` after the value in an f-string. `round()` won't do here: `round(11.7, 2)` prints `11.7`, but this prints `11.70`:
+
+      print(f"{11.7:.2f}")
 
 
 ## Run

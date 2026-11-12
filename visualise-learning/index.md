@@ -2,7 +2,7 @@
 
 Continue working in `gradient_descent.py`.
 
-In the previous assignment you ran `fit(0, 0, 5000, 1e-5)` and got an MSE of 151.9876 — far from a good fit. The loss curve you plotted shows why: 5000 iterations at that learning rate is nowhere near convergence.
+In the previous assignment you ran `fit(0, 0, 1000, 1e-6)` and got an MSE of 144.5939 — far from a good fit. The loss curve you plotted shows why: 1000 iterations at that learning rate is nowhere near convergence.
 
 ## Assignment
 
@@ -15,7 +15,7 @@ Find a combination of `learning_rate` and `n_iterations` that gets the MSE below
 
 Make sure your final file produces **all four** of the following when run:
 
-1. The printed output from Part 1 (`fit(0, 0, 5000, 1e-5)`)
+1. The printed output from Part 1 (`fit(0, 0, 1000, 1e-6)`)
 2. The printed output from your converged fit
 3. A plot of the converged fit on top of the scatter data
 4. A plot of the MSE over iterations for the converged run

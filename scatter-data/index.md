@@ -14,3 +14,5 @@ Make sure to:
 ## Checkpy
 
     checkpy exploration
+
+This is only the first part of `exploration.py`: you will continue in the next assignment, Manual Fitting. Checkpy already tests both parts, so for now only the checks for the scatter plot, the axis labels and the title will pass. The rest will turn green once you finish Manual Fitting.

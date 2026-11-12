@@ -12,6 +12,8 @@ Apply the affine function with $$w = 0.022$$ and $$b = -29.0$$ to the list of ye
 
     MSE for w=0.022, b=-29.0: 0.9007
 
+> To print four decimals, add `:.4f` after the value in an f-string, e.g. `f"{error:.4f}"`.
+
 ## Part 2: second fit
 
 Try a second parameterisation: $$w = 0.01$$ and $$b = -6.0$$. Add this line to the same plot. Make clear in the legend which line belongs to which parameterisation.
