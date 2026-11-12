@@ -72,7 +72,13 @@ where $$\alpha$$ is the **learning rate**. This is a small positive number that 
 
 ## Part 1
 
-Create a file called `gradient_descent.py`. Read `emissions.csv` into two lists, `emissions` and `warming`, and copy in your `plot_regression`, `apply_affine`, `vector_diff`, `inner_product`, and `mse` functions from week 5.
+Create a file called `gradient_descent.py`. Read `emissions.csv` into two lists, `emissions` and `warming`, and copy the following functions over from week 5:
+
+- `apply_affine`
+- `vector_diff`
+- `inner_product`
+- `mse`
+- `plot_regression` -> this one will have to be modified slightly for this usecase. The rest of the functions can be kapt as is.
 
 Implement the following function:
 
