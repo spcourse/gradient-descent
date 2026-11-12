@@ -1,4 +1,4 @@
-# Visualise Learning
+# Visualize Learning
 
 Continue working in `gradient_descent.py`.
 
@@ -13,12 +13,13 @@ Find a combination of `learning_rate` and `n_iterations` that gets the MSE down 
     print(f"b = {b:.6f}")
     print(f"MSE = {mse_list[-1]:.4f}")
 
-Make sure your final file produces **all four** of the following when run:
+Make sure your final file produces **all** of the following when run:
 
-1. The printed output from Part 1 (`fit(emissions, warming, 0, 0, 50, 1e-4)`)
-2. The printed output from your converged fit
-3. A plot of the converged fit on top of the scatter data
-4. A plot of the MSE over iterations for the converged run
+1. The three plots from `visualize_learning`
+2. The printed output from Part 2 (`fit(emissions, warming, 0, 0, 50, 1e-4)`)
+3. The printed output from your converged fit
+4. A plot of the converged fit on top of the scatter data
+5. A plot of the MSE over iterations for the converged run
 
 ## Hints
 

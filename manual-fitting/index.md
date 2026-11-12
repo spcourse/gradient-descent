@@ -16,7 +16,7 @@ Apply the affine function with $$w = 0.022$$ and $$b = -29.0$$ to the list of ye
 
 ## Part 2: second fit
 
-Try a second parameterisation: $$w = 0.01$$ and $$b = -6.0$$. Add this line to the same plot. Make clear in the legend which line belongs to which parameterisation.
+Try a second parameterization: $$w = 0.01$$ and $$b = -6.0$$. Add this line to the same plot. Make clear in the legend which line belongs to which parameterization.
 
 Print the MSE for this fit as well.
 

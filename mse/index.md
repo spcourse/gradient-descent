@@ -9,7 +9,7 @@ Now suppose we also know the actual sale prices of those six apartments:
 
     actual = [280000.0, 400000.0, 540000.0, 660000.0, 760000.0, 1020000.0]
 
-Our predictions are close, but not perfect. To know *how well* our model is doing, we need a single number that summarises the error across all predictions. This number is called a **loss**.
+Our predictions are close, but not perfect. To know *how well* our model is doing, we need a single number that summarizes the error across all predictions. This number is called a **loss**.
 
 ## Mean Squared Error
 
