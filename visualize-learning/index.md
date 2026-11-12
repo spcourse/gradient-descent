@@ -24,7 +24,7 @@ Make sure your final file produces **all** of the following when run:
 ## Hints
 
 - A larger learning rate converges faster but may overshoot and diverge. If you get `nan` or huge numbers, your learning rate is too large.
-- The loss curve from Part 1 gives you a sense of the shape (the MSE drops steeply at first and then flattens). More iterations alone won't help much if the learning rate is too small.
+- The loss curve from Gradient Descent gives you a sense of the shape (the MSE drops steeply at first and then flattens). More iterations alone won't help much if the learning rate is too small.
 - Try increasing the learning rate first, then adjust the number of iterations until the loss curve has clearly flattened out.
 
 ## Run

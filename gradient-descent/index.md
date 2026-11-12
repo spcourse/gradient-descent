@@ -124,11 +124,13 @@ Print the result:
     b = 0.096327
     MSE = 0.0496
 
-This is only a partial result — 50 iterations at this learning rate is not enough to fully converge. You will fix that in the next assignment.
+This is not the best possible result. The 50 iterations at this learning rate is not enough to fully converge. You will fix that in the next step.
 
 ## Part 3: plot
 
-Plot the final regression line with `plot_regression` (use the last MSE in `mse_list`), and plot `mse_list` in a second figure, to show how the MSE decreased over the iterations.
+Plot the final regression line with `plot_regression` (use the last MSE in `mse_list`), and plot `mse_list` in a second figure, to show how the MSE decreased over the iterations. 
+
+Try to improve the rsults. Copy the line `w, b, mse_list = fit(emissions, warming, 0, 0, ..., ...)` and find a combination of learning rate and number of iterations that converge on an mse of `0.017`.
 
 ## Run
 
