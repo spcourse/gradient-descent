@@ -25,15 +25,15 @@ $$\hat{y} = wx + b$$
 
 where $$w$$ (weight) is the slope and $$b$$ (bias) is the intercept. Both are scalars. Here $$w$$ is the warming per thousand gigatonnes of CO₂.
 
-In practice we express the regression in terms of vectors as we want to predict multiple $$x$$ values at once. Given the $$\vec{x}$$ vector, $$\hat{\vec{y}}$$ is defined by applying the affine function to all elements of $$\vec{x}$$:
+In practice we express the regression in terms of vectors as we want to make predictions for multiple $$x$$ values at once. Given the $$\vec{x}$$ vector, $$\hat{\vec{y}}$$ is defined by applying the affine function to all elements of $$\vec{x}$$:
 
 $$
 \hat{\vec{y}} =
 \begin{pmatrix}
-w \cdot x_0 + b \\
 w \cdot x_1 + b \\
+w \cdot x_2 + b \\
 \vdots \\
-w \cdot x_{n-1} + b
+w \cdot x_N + b
 \end{pmatrix}
 $$
 
@@ -58,7 +58,7 @@ To minimize the loss, we need its partial derivatives with respect to $$w$$ and 
 
 (for the vector notation, $$\vec{1}$$ is a vector of ones with $$N$$ elements)
 
-> Both $$\frac{\partial\,\mathrm{Loss}}{\partial w}$$ and $$\frac{\partial\,\mathrm{Loss}}{\partial b}$$ are **scalars**, single values. What these partial derivatives tell us is how much will the loss *increase* if we slightly increase the respective parameter. For example, if $$\frac{\partial\,\mathrm{Loss}}{\partial w} = 7$$, that means that if we increase $$w$$ by a small amount (e.g., $$0.01$$) then the loss will *increase* by 7 times that small amount ($$0.07$$)
+> Both $$\frac{\partial\,\mathrm{Loss}}{\partial w}$$ and $$\frac{\partial\,\mathrm{Loss}}{\partial b}$$ are **scalars**, single values. What these partial derivatives tell us is how much the loss will *increase* if we slightly increase the respective parameter. For example, if $$\frac{\partial\,\mathrm{Loss}}{\partial w} = 7$$, that means that if we increase $$w$$ by a small amount (e.g., $$0.01$$) then the loss will *increase* by 7 times that small amount ($$0.07$$).
 
 ## The update step
 
@@ -78,7 +78,7 @@ Create a file called `gradient_descent.py`. Read `emissions.csv` into two lists,
 - `vector_diff`
 - `inner_product`
 - `mse`
-- `plot_regression` -> this one will have to be modified slightly for this usecase. The rest of the functions can be kapt as is.
+- `plot_regression`: change the axis labels to fit this data. The rest of the functions can be kept as they are.
 
 Implement the following function:
 
@@ -87,7 +87,7 @@ Implement the following function:
     
     visualize_learning(emissions, warming, 0, 0, 0.001)
 
-It should show three iterations of the learning and show a plot of the regression line at each instance. The algorithm should follow this structure:
+It should run three steps of gradient descent and show a plot of the regression line at each step. The algorithm should follow this structure:
 
 1. Set `w = w_start` and `b = b_start`.
 2. Repeat three times:
@@ -130,13 +130,18 @@ Print the result:
     b = 0.096327
     MSE = 0.0496
 
-This is not the best possible result. The 50 iterations at this learning rate is not enough to fully converge. You will fix that in the next step.
+This is not the best possible result. Fifty iterations at this learning rate are not enough to fully converge. You will fix that in Part 3.
 
-## Part 3: plot
+## Part 3: Visualize learning and improve results
 
-Plot the final regression line with `plot_regression` (use the last MSE in `mse_list`), and plot `mse_list` in a second figure, to show how the MSE decreased over the iterations. 
+Plot the final regression line with `plot_regression` (use the last MSE in `mse_list`), and plot `mse_list` in a second figure, to show how the MSE decreased over the iterations.
 
-Try to improve the rsults. Copy the line `w, b, mse_list = fit(emissions, warming, 0, 0, ..., ...)` and find a combination of learning rate and number of iterations that converge on an mse of `0.017`.
+Try to improve the results. Copy the line `w, b, mse_list = fit(emissions, warming, 0, 0, ..., ...)` and find a combination of learning rate and number of iterations that converges to an MSE of `0.0167`. Print the result in the same way as in Part 2, and make the same two plots for this run. Keep Part 2 in your file as well: checkpy checks both runs.
+
+### Hints
+
+- A larger learning rate converges faster, but may overshoot and diverge. If you get `nan` or huge numbers, your learning rate is too large.
+- Increase the learning rate first, then adjust the number of iterations until the MSE curve has clearly flattened out.
 
 ## Run
 

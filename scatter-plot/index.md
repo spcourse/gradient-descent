@@ -26,10 +26,11 @@ It draws:
 * the line $$f(x) = wx + b$$, computed with your `apply_affine` function and labelled with the model, for example `f(x) = 8x + 50`
 * a legend
 * the MSE as the title, with four decimals, for example `MSE = 100.0000`
+* the axis labels `Size (m²)` and `Price (× €1000)`
 
-The function does not label the axes and does not call `plt.show()`. That is up to the code that calls it, so you can reuse the function later for other data.
+The function does not call `plt.show()`. That is up to the code that calls it.
 
-Then use it for the apartments: compute the MSE of the model with your `mse` function, call `plot_regression`, label the axes (`Size (m²)` and `Price (× €1000)`) and show the plot. The title should read `MSE = 100.0000`.
+Then use it for the apartments: compute the MSE of the model with your `mse` function, call `plot_regression` and show the plot. The title should read `MSE = 100.0000`.
 
 ## Hints
 
