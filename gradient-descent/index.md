@@ -92,7 +92,7 @@ It should run three steps of gradient descent and show a plot of the regression 
 1. Set `w = w_start` and `b = b_start`.
 2. Repeat three times:
     1. Compute the MSE of the current line: `mse(apply_affine(xs, w, b), ys)`.
-    2. Call `plot_regression` with `xs`, `ys`, `w`, `b` and the MSE, and show the plot with `plt.show()`.
+    2. Call `plot_regression` with `xs`, `ys`, `w`, `b` and the MSE.
     3. Update `w` and `b` as described in the update step above (using the learning rate and the partial derivatives):
 
            w = ...

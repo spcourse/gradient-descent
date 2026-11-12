@@ -20,7 +20,7 @@ Create a file called `plot_regression.py` and define the following function:
     def plot_regression(xs, ys, w, b, mse_value):
         ...
 
-It draws:
+It draws and shows a plot with:
 
 * the data `xs` and `ys` as a scatter plot, labelled `data`
 * the line $$f(x) = wx + b$$, computed with your `apply_affine` function and labelled with the model, for example `f(x) = 8x + 50`
@@ -28,9 +28,9 @@ It draws:
 * the MSE as the title, with four decimals, for example `MSE = 100.0000`
 * the axis labels `Size (m²)` and `Price (× €1000)`
 
-The function does not call `plt.show()`. That is up to the code that calls it.
+The function ends by showing the plot with `plt.show()`.
 
-Then use it for the apartments: compute the MSE of the model with your `mse` function, call `plot_regression` and show the plot. The title should read `MSE = 100.0000`.
+Then use it for the apartments: compute the MSE of the model with your `mse` function and call `plot_regression`. The title should read `MSE = 100.0000`.
 
 ## Hints
 
